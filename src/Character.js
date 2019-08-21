@@ -1,3 +1,4 @@
+
 export class Character {
   constructor(charName, charClass, stats) {
     this.charName = charName;

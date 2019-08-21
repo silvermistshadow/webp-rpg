@@ -9,7 +9,12 @@
 _{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
 
 Stages: 
-0. Character types
+0. Character types, attributes, names
+1. Battle system
+  0. Basic dice rolling, with some part of attributes added
+  1. Derived stats from main stats, so that the player has HP and all that
+  2. Add a basic, rule-based computer opponent
+  3. Add experience if the player wins
 
 ## Setup/Installation Requirements
 
