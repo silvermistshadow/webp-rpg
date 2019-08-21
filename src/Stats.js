@@ -3,10 +3,8 @@ export class Stats {
     this.body = body;
     this.spirit = spirit;
     this.mind = mind;
-  }
-  derivedStats() {
-    let health = this.body * 10;
-    let resistance = this.mind * 10;
-    let chi = this.spirit * 10;
+    this.health = body * 10;
+    this.resistance = mind * 10;
+    this.chi = spirit * 10;
   }
 }
