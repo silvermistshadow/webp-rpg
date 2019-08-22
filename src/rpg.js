@@ -1,5 +1,5 @@
 import { getRandomIntInclusive } from "./getRandomIntInclusive";
-import { Stats, derivedStats } from "./Stats";
+import { Stats } from "./Stats";
 
 export class Rpg {
   constructor(character) {
