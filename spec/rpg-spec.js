@@ -60,6 +60,15 @@ describe('battle', function() {
     let exampleBattle = new battle(exampleChar, enemyMaker);
     let exampleDamage = exampleBattle.playerDamageEnemy();
     console.log(exampleDamage);
-
+  });
+  it('should see when one character has lost all health and declare a winner', function() {
+    let exampleStats = new Stats(12, 10, 8);
+    let exampleChar = new Character("Cecil", "Waterbender", exampleStats);
+    let exampleEnemyStats = new Stats(12, 10, 8);
+    exampleEnemyStats.enemyStatMaker();
+    let enemyMaker = new Character("Enemy", "Firebender", exampleEnemyStats);
+    let exampleBattle = new battle(exampleChar, enemyMaker);
+    enemyMaker.stats.health = 0;
+    exampleBattle.damageEnemy();
   });
 });

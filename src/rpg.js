@@ -40,7 +40,34 @@ export class battle extends Rpg {
     return modifiedDamage;
   }
 
-  
+  damageEnemy() {
+    let initHealth = this.enemy.stats.health;
+    let damageCalc = this.playerDamageEnemy();
+    let outputHealth = initHealth - damageCalc;
+    this.enemy.stats.health = outputHealth;
+    if (this.enemy.stats.health <= 0) {
+      this.battleOver(this.character);
+    }
+  }
+
+  damagePlayer() {
+    let initHealth = this.character.stats.health;
+    let damageCalc = this.enemyDamagePlayer();
+    let outputHealth = initHealth - damageCalc;
+    this.character.stats.health = outputHealth;
+    if (this.character.stats.health <= 0) {
+      this.battleOver(this.enemy);
+    }
+  }
+
+  battleOver(winner) {
+    if (winner == this.character) {
+      console.log("A WINNER IS YOU")
+    }
+    else if (winner == this.enemy) {
+      console.log("YOUR HEAD A SPLODE")
+    }
+  }
 
 }
 
