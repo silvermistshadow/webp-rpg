@@ -1,5 +1,6 @@
 import { getRandomIntInclusive } from "./getRandomIntInclusive";
 import { Stats } from "./Stats";
+import { Character } from "./Character";
 
 export class Rpg {
   constructor(character) {
@@ -13,9 +14,33 @@ export class battle extends Rpg {
     this.character = character;
     this.enemy = enemy;
   }
-  /*Okay, this one is going to be a bit complicated. We somehow need to get the stats from both of the previous things:
-  the character and the enemy.*/
+
+
   playerAttackRoller() {
+    let rolledNum = getRandomIntInclusive(1, 20);
+    let modifiedNum = rolledNum + this.character.stats.chi;
+    return modifiedNum;
   }
+
+  enemyAttackRoller() {
+    let rolledNum = getRandomIntInclusive(1, 20);
+    let modifiedNum = rolledNum + this.enemy.stats.chi;
+    return modifiedNum;
+  }
+
+  playerDamageEnemy() {
+    let initDamage = this.playerAttackRoller();
+    let modifiedDamage = initDamage - this.enemy.stats.resistance;
+    return modifiedDamage;
+  }
+
+  enemyDamagePlayer() {
+    let initDamage = this.enemyAttackRoller();
+    let modifiedDamage = initDamage - this.character.stats.resistance;
+    return modifiedDamage;
+  }
+
+  
+
 }
 
