@@ -13,14 +13,15 @@ Stages:
 1. Battle system
   0. Basic dice rolling, with some part of attributes added
   1. Derived stats from main stats, so that the player has HP and all that
+  1.5. Basic system in place for rolling and damage
   2. Add a basic, rule-based computer opponent
   3. Add experience if the player wins
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
+* _Download this whole repo_
+* _Navigate to it with your shell/terminal/whatever_
+* _use 'npm run install'_
 * _easy-to-understand_
 * _format_
 
