@@ -40,6 +40,9 @@ describe('battle', function() {
     let enemyMaker = new Character("Enemy", "Firebender", exampleEnemyStats);
     let exampleBattle = new battle(exampleChar, enemyMaker);
     console.log(exampleBattle);
+    expect(exampleChar.charName).toEqual("Cecil");
+    expect(exampleChar.charClass).toEqual("Waterbender");
+    expect(exampleChar.stats).toEqual(exampleStats);
   });
   it('should roll a number and add it to the character stats', function() {
     let exampleStats = new Stats(12, 10, 8);
