@@ -1,6 +1,7 @@
 import { Character } from "./Character";
 import { Stats } from "./Stats";
 import { Rpg, battle } from './Rpg';
+import $ from 'jquery';
 
 let testStats = new Stats(12, 10, 8);
 let testCharacter = new Character("Cecil", "Waterbender", testStats);
@@ -21,5 +22,15 @@ $(document).ready(function() {
   $("button#attack-btn").click(function () {
     testBattle.damageEnemy();
     testBattle.damagePlayer();
+    displayHealth();
+    if (testBattle.winner === 1) {
+      $("#winner").html("<p>A WINNER IS YOU</p>" + "<p>Refresh to restart</p>");
+      $("button#attack-btn").prop('disabled', true);
+    }
+    else if (testBattle.winner === 2) {
+      $("#winner").html("<p>YOUR HEAD A SPLODE</p>" + "<p>Refresh to restart</p>");
+      $("button#attack-btn").prop('disabled', true);
+    }
   });
+
 })

@@ -13,6 +13,7 @@ export class battle extends Rpg {
     super();
     this.character = character;
     this.enemy = enemy;
+    this.winner = 0;
   }
 
 
@@ -62,10 +63,10 @@ export class battle extends Rpg {
 
   battleOver(winner) {
     if (winner == this.character) {
-      console.log("A WINNER IS YOU")
+      this.winner = 1;
     }
     else if (winner == this.enemy) {
-      console.log("YOUR HEAD A SPLODE")
+      this.winner = 2;
     }
   }
 
