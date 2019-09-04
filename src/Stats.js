@@ -13,5 +13,8 @@ export class Stats {
     this.body = getRandomIntInclusive(5, 20);
     this.spirit = getRandomIntInclusive(5, 20);
     this.mind = getRandomIntInclusive(5, 20);
+    this.health = this.body * 10;
+    this.resistance = this.mind * 10;
+    this.chi = this.spirit * 10;
   }
 }
